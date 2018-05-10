@@ -1,0 +1,23 @@
+<html>
+<script src=bower_components/angular/angular.js> 
+</script>
+<script>
+	var myApp = angular.module("nish", []);
+	myApp.controller('demoController', function($scope){
+			var Students = [
+			{Name: "Nish", Address: "Pune", Roll_Number: 10},
+			{Name: "Raj", Address: "Mumbai", Roll_Number: 11},
+			{Name: "Bhavuk", Address: "Jabalpur", Age: 10}
+			];
+			$scope.AllStudents = Students;
+	});
+</script>
+<body ng-app="nish" ng-controller="demoController">
+	<div ng-repeat="values in AllStudents">
+	{{values.Name}}
+	{{values.Address}}
+	{{values.Roll_Number}}
+	{{values.Age}}
+	</div>
+</body>
+</html>
